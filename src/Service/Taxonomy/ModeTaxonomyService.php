@@ -46,27 +46,4 @@ final class ModeTaxonomyService
 
         $this->registerTaxonomy('ag_mode', ['ag_property'], $args);
     }
-    
-    /**
-     * addValues
-     *
-     * @return void
-     */
-    public function addValues(): void
-    {
-        $modes = [
-            [
-                "name"  => __("Location", "agence"),
-                "slug"  => __("location", "agence,")
-            ],
-            [
-                "name"  => __("Vendre", "agence"),
-                "slug"  => __("vendre", "agence"),
-            ],
-        ];
-
-        foreach($modes as $mode) {
-            $this->registerValues($mode, 'ag_mode');
-        }
-    }
 }

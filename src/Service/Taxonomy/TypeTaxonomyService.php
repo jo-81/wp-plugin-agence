@@ -41,22 +41,4 @@ final class TypeTaxonomyService
 
         $this->registerTaxonomy('ag_type', ['ag_property'], $args);
     }
-
-    public function addValues(): void
-    {
-        $types = [
-            [
-                "name"  => __("Appartement", "agence"),
-                "slug"  => __("appartement", "agence,")
-            ],
-            [
-                "name"  => __("Maison", "agence"),
-                "slug"  => __("maison", "agence"),
-            ],
-        ];
-
-        foreach($types as $type) {
-            $this->registerValues($type, 'ag_type');
-        }
-    }
 }
