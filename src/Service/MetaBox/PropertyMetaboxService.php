@@ -2,7 +2,7 @@
 
 namespace App\Service\MetaBox;
 
-use App\MetaBox\PropertyMetabox;
+use App\Metabox\PropertyMetabox;
 use App\Metabox\MetaboxInterface;
 
 if (! defined('ABSPATH')) {
