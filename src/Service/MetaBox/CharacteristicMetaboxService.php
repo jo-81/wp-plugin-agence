@@ -4,7 +4,7 @@ namespace App\Service\MetaBox;
 
 
 use App\Metabox\MetaboxInterface;
-use App\MetaBox\CharacteristicMetabox;
+use App\Metabox\CharacteristicMetabox;
 
 if (! defined('ABSPATH')) {
     exit;

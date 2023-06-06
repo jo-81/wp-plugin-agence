@@ -8,8 +8,6 @@ if (! defined('ABSPATH')) {
 
 trait MetaboxTrait
 {
-    public const PARAMETERS_OBLIGATORY = ['title', 'callback'];
-
     private array $metaBoxes = [];
 
     /**
@@ -34,12 +32,6 @@ trait MetaboxTrait
     public function registerMetaBoxes()
     {
         foreach ($this->metaBoxes as $metaBox) {
-            foreach (self::PARAMETERS_OBLIGATORY as $obligatory) {
-                if (! array_key_exists($obligatory, $metaBox)) {
-                    throw new \Exception(sprintf("Le paramètre %s est manquant pour l'ajout de la metabox.", $obligatory));
-                }
-            }
-
             add_meta_box(
                 $metaBox['id'],
                 $metaBox['title'],
