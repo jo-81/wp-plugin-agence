@@ -1,0 +1,119 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.form-section {
+    @apply mb-4;
+}
+
+.form-label {
+    @apply block mb-1 font-bold;
+}
+
+.form-input {
+    @apply w-full;
+}
+
+.form-control {
+    @apply mb-4;
+}
+
+.form-help {
+    @apply mt-1 text-xs block;
+}
+
+/* Adresse */
+.card-adress {
+    @apply mt-2 p-3 shadow-md cursor-pointer hover:bg-slate-100 transition-colors duration-150;
+}
+
+/* BUTTONS */
+.btn {
+    @apply px-3 py-1.5 rounded-md;
+}
+
+.btn-primary {
+    @apply bg-blue-600 text-white hover:bg-blue-500 transition-colors duration-150;
+}
+
+/* GALLERY */
+.card-picture {
+    @apply rounded-md overflow-hidden relative;
+}
+
+/* TABS */
+.nav-item-tab {
+    @apply block px-4 py-1.5 cursor-pointer rounded-md;
+}
+
+.nav-item-tab.active-tab {
+    @apply bg-primary text-white shadow;
+}
+
+/* PAGINATION */
+.pagination-nav {
+    @apply flex items-center mt-2 gap-2;
+}
+
+.pagination-nav-item {
+    @apply list-none;
+}
+
+.pagination-nav-link {
+    @apply rounded-md px-3 py-1.5 bg-white;
+}
+
+.pagination-nav-link.active {
+    @apply bg-primary text-white;
+}
+
+/* MASONRY */
+@layer utilities {
+    @variants responsive {
+        .masonry-3-col {
+            column-count: 3;
+            column-gap: 1em;
+        }
+
+        .masonry-2-col {
+            column-count: 2;
+            column-gap: 1em;
+        }
+
+        .break-inside {
+            break-inside: avoid;
+        }
+    }
+}
+
+/* PROPERTY */
+.form-filter-property {
+    @apply mb-4 shadow p-6;
+}
+
+/* GALLERY */
+.controllers {
+    @apply absolute left-0 right-0 p-6 bottom-0 flex items-center justify-between bg-white/20;
+}
+
+.slide:not(.show) {
+    @apply hidden;
+}
+
+/* ALERT */
+.ag-alert {
+    @apply border px-4 py-2;
+}
+
+.ag-alert > * {
+    @apply mb-0;
+}
+
+.ag-alert.ag-alert-danger {
+    @apply border-danger/70 bg-danger/20 text-danger/70;
+}
+
+/* BADGE */
+.ag_badge {
+    @apply bg-secondary px-2 py-1 text-sm rounded-sm font-bold;
+}
